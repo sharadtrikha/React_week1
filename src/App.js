@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import ProductList from "./components/ProductList/ProductList";
+import User from "./components/User";
+import Dummy1 from "./components/Friyay/dummy1";
+import Dummy2 from "./components/Friyay/dummy2";
+import Dummy3 from "./components/Friyay/dummy3";
+import Dummy4 from "./components/Friyay/dummy4";
 
-function App() {
+const productListData = [
+  {
+    id: 1,
+    name: 'Apple',
+    desc: 'Italian apple',
+    price: '12$'
+  },
+  {
+    id: 2,
+    name: 'Salt',
+    desc: 'Rock salt',
+    price: '2$'
+  },
+  {
+    id: 3,
+    name: 'Soap',
+    desc: 'Lifeboy',
+    price: '5$'
+  }
+]
+
+const App = () => {
+  const [id, setId] = useState(true);
+
+  const onClickhandler = () => {
+    setId(false) // this is not right!!!!
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div>
+      {/* <ProductList productListData={productListData} />
+      <User userId={'fdf'} />  */}
+    {/* <Dummy1 value={id} /> */}
 
+    {/* <Dummy2 />
+    <Dummy3 />
+
+    <button onClick={onClickhandler}>App Component - Click me</button> */}
+
+    {id ? <Dummy4 /> : null}
+  <button onClick={onClickhandler}>App Component - Click me</button>
+      
+    </div>
+    
+  )
+}
 export default App;

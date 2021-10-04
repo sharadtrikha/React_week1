@@ -1,3 +1,7 @@
+JSX :
+Looks like html.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +72,27 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+Virtual dom
+ReactDOM lib. keeps this Tree of react elements and dom in sync.
+Only changes those aspects of dom which are required
+
+Reconciliation
+Compare 2 Trees of React elements (in memory hierarchy of js objects ) and see what got changed.
+
+What is React library responsibility ?
+Gives us - React Components, concepts of props and state, jsx(createElement).
+
+On state change -
+re-evaluate component and make new jsx object.
+compare old n new tree of react elements.
+Instructs what are the changes to be done, but does not by itself.
+
+What is React DOM lib. responsiblity ?
+It takes those instructions from React lib., and update DOM efficiently.
+
+
+
+-> o(n3)
+but react does it in o(n) via heuristic approach

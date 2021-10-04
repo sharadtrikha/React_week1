@@ -1,0 +1,24 @@
+.product {
+    background-color: rgb(143, 209, 209);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.productName {
+    font-weight: 500;
+}
+
+.productdesc {
+    font-size: 12px;
+}
+
+.price {
+    font-size: 14px;
+}
+
+.stepper {
+    margin: 10px 4px;
+    display: flex;
+    justify-content: space-between;
+}
